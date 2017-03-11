@@ -18,4 +18,5 @@ function ProductosService($http, $q){
         });
     }
     
-}
+};
+

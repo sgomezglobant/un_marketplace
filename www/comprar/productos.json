@@ -10,7 +10,7 @@
                 "nombre": "Mackbook Pro 13",
                 "precio": 1000,
                 "cantidad": 80,
-                "imagen": "mackbook.png"
+                "imagen": "mackbook.jpeg"
             },
             {
                 "nombre": "Refrigerador",
@@ -19,10 +19,11 @@
                 "imagen": "refrigerador.png"
             },
             {
-                "nombre": "iPhone 6",
-                "precio": 500,
-                "cantidad": 100,
+                "nombre": "iPhone 6s",
+                "precio": 600,
+                "cantidad": 140,
                 "imagen": "iphone.png"
             }
         ]
 }
+
