@@ -1,0 +1,29 @@
+{
+        "productos": [
+            {
+                "nombre": "iPhone 6",
+                "precio": 500,
+                "cantidad": 100,
+                "imagen": "iphone.png"
+            },
+            {
+                "nombre": "Mackbook Pro 13",
+                "precio": 1000,
+                "cantidad": 80,
+                "imagen": "mackbook.jpeg"
+            },
+            {
+                "nombre": "Refrigerador",
+                "precio": 400,
+                "cantidad": 10,
+                "imagen": "refrigerador.jpg"
+            },
+            {
+                "nombre": "iPhone 6s",
+                "precio": 600,
+                "cantidad": 140,
+                "imagen": "iphone.png"
+            }
+        ]
+}
+

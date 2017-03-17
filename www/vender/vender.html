@@ -1,6 +1,23 @@
 <!-- Vista vender -->
 <ion-view view-title="Vender">
   <ion-content>
-    Hola Vender
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" ng-model="ctrl.product.nombre" placeholder="Nombre">
+      </label>
+      <label class="item item-input">
+        <input type="number" ng-model="ctrl.product.precio" placeholder="Precio">
+      </label>
+      <label class="item item-input">
+        <input type="tel" ng-model="ctrl.product.cantidad" placeholder="Cantidad">
+      </label>
+      <label class="item item-input">
+        <input type="text" ng-model="ctrl.product.imagen" placeholder="Foto Url">
+      </label>
+    </div>
+    <div class="row text-center">
+      <div class="col"><button class="button button-positive">Previsualizar</button></div>
+      <div class="col"><button class="button button-balanced">Guardar</button></div>
+    </div>
   </ion-content>
 </ion-view>
