@@ -1,21 +1,16 @@
 angular.module('starter').service('ProductosService', ProductosService);
 
-ProductosService.$inject = ['$http', '$q'];
+ProductosService.$inject = ['$http', '$q', '$firebaseArray', '$firebaseObject'];
 
-function ProductosService($http, $q){
+function ProductosService($http, $q, $firebaseArray, $firebaseObject){
 
     return {
         lista: lista
     };
 
     function lista() {
-        return $http.get('comprar/productos.json')
-        .then(function(response) {
-            return response.data.productos;
-        })
-        .catch(function(error){
-            $q.reject();
-        });
+        var productsRef = firebase.database().ref().child('productos');
+        return $firebaseArray(productsRef).$loaded();
     }
     
 };
