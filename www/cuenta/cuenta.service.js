@@ -1,6 +1,7 @@
 angular.module('starter')
 .factory('servicioCuenta', function($firebaseAuth, $ionicLoading) {
-  var auth = $firebaseAuth();
+  var auth = $firebaseAuth(),
+    usuarioActual;
   return {
     registrar: function (user) {
      return  auth.$createUserWithEmailAndPassword(user.email, user.password);

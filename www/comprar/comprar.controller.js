@@ -1,13 +1,27 @@
 // comprar.controller.js
 angular.module('starter').controller('ComprarCtrl', ComprarCtrl);
 
-ComprarCtrl.$inject = ['$scope', 'ProductosService'];
+ComprarCtrl.$inject = ['$scope', '$state', '$ionicPopup', 'ProductosService', 'servicioCuenta'];
 
-function ComprarCtrl($scope, ProductosService) {
+function ComprarCtrl($scope, $state, $ionicPopup, ProductosService, servicioCuenta) {
     var vm = this;
     ProductosService.lista().then(function (productos) {
         vm.productos = chunk(productos, 2);
     });
+
+    $scope.comprar = function(p) {
+        var usuario= servicioCuenta.usuarioActual();
+        if (usuario) {
+            ProductosService.comprar(usuario.email, p.$id).then(function () {
+                    $ionicPopup.alert({
+                        title: 'Compra exitosa!',
+                        template: 'Continua comprando.'
+                    });
+            });
+        } else {
+            $state.go('tab.cuenta');
+        }
+    };
 
 
     // Esta función recibe un array y crea combinaciones de filas y
