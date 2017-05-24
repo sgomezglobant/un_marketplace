@@ -1,100 +1,26 @@
-<!-- Vista vender -->
-<ion-view view-title="Vender">
-  <ion-content>
-
-    <!--<div class="list">
-      <label class="item item-input">
-        <span class="input-label">Nombre</span>
-        <input type="text" placeholder="Escribe un nombre">
-      </label>
-      <label class="item item-input">
-        <span class="input-label">Email</span>
-        <input type="email" placeholder="tu@email.com">
-      </label>
-    </div>-->
-
-    <!--<div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Nombre</span>
-    <input type="text" placeholder="John">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Edad</span>
-    <input type="number" placeholder="21">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Email</span>
-    <input type="text" placeholder="john@suhr.com">
-  </label>
-</div>-->
-
-    <!--<div class="list">
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Nombre</span>
-    <input type="text" placeholder="Ingrese su nombre">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Edad</span>
-    <input type="text" placeholder="Ingrese su edad">
-  </label>
-  <label class="item item-input item-floating-label">
-    <span class="input-label">Email</span>
-    <input type="text" placeholder="ingrese@suemail.com">
-  </label>
-</div>-->
-    <!--
-
-<div class="list">
-
-  <div class="item item-input-inset">
-    <label class="item-input-wrapper">
-      <input type="text" placeholder="Email">
-    </label>
-    <button class="button button-small">
-      Submit
-    </button>
-  </div>
-
-</div>-->
-
-    <!--<div class="list">
-  <ion-toggle ng-model="notificacionesOn">Enviar Notificaciones</ion-toggle>
-  <div class="item item-divider">
-    Horario Notificaciones
-  </div>
-  <ion-radio ng-model=".horario" ng-value="AM">AM</ion-radio>
-  <ion-radio ng-model="horario" ng-value="PM">PM</ion-radio>
-  <div class="item item-divider">
-    Recibir Notificaciones Sobre
-  </div>
-  <ion-checkbox ng-model="preferencia1" ng-value="Futbol">Fútbol</ion-checkbox>
-  <ion-checkbox ng-model="preferencia2" ng-value="Baloncesto">Baloncesto</ion-checkbox>
-  <ion-checkbox ng-model="preferencia3" ng-value="Tenis">Tenis</ion-checkbox>  
-</div>-->
-
+<!-- Vista vender --> 
 <ion-view view-title="Vender">
   <ion-content>
     <div class="list">
       <label class="item item-input">
         <span class="input-label">Nombre</span>
-        <input type="text" ng-model="ctrl.product.nombre" placeholder="Balon C423">
+        <input type="text" ng-model="producto.nombre" placeholder="Balon C423">
       </label>
       <label class="item item-input">
         <span class="input-label">Precio</span>
-        <input type="number" ng-model="ctrl.product.precio" placeholder="Precio de Venta">
+        <input type="number" ng-model="producto.precio" placeholder="Precio de Venta">
       </label>
       <label class="item item-input">
         <span class="input-label">Cantidad</span>
-        <input type="tel" ng-model="ctrl.product.cantidad" placeholder="Un valor mayor a 0">
+        <input type="number" ng-model="producto.cantidad" placeholder="Cantidad de productos">
       </label>
       <label class="item item-input">
         <span class="input-label">Url imagen</span>
-        <input type="text" ng-model="ctrl.product.imagen" placeholder="Foto Url">
+        <input type="text" ng-model="producto.imagen" placeholder="Foto Url">
       </label>
     </div>
     <div class="row text-center">
-      <div class="col"><button ng-click="ctrl.previsualizar()" class="button button-positive">Previsualizar</button></div>
-      <div class="col"><button ng-click="ctrl.guardar()" class="button button-balanced">Guardar</button></div>
+      <div class="col"><button ng-click="vender()" class="button button-balanced">Guardar</button></div>
     </div>
   </ion-content>
 </ion-view>

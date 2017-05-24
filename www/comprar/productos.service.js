@@ -6,7 +6,8 @@ function ProductosService($http, $q, $firebaseArray, $firebaseObject){
 
     return {
         lista: lista,
-        comprar: comprar
+        comprar: comprar,
+        vender: vender
     };
 
     function lista() {
@@ -17,6 +18,11 @@ function ProductosService($http, $q, $firebaseArray, $firebaseObject){
     function comprar(userId, productId) {
         var comprasRef = firebase.database().ref('/compras/');
         return $firebaseArray(comprasRef).$add({usuario: userId, producto: productId});
+    }
+
+    function vender(product) {
+        var comprasRef = firebase.database().ref('/productos/');
+        return $firebaseArray(comprasRef).$add(product);
     }
     
 };

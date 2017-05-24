@@ -5,8 +5,12 @@ ComprarCtrl.$inject = ['$scope', '$state', '$ionicPopup', 'ProductosService', 's
 
 function ComprarCtrl($scope, $state, $ionicPopup, ProductosService, servicioCuenta) {
     var vm = this;
-    ProductosService.lista().then(function (productos) {
-        vm.productos = chunk(productos, 2);
+    
+
+    $scope.$on('$ionicView.beforeEnter', function(){
+        ProductosService.lista().then(function (productos) {
+            vm.productos = chunk(productos, 2);
+        });
     });
 
     $scope.comprar = function(p) {
