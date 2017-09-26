@@ -1,0 +1,12 @@
+.comprar {
+    .producto{
+        border: 1px solid black; 
+        margin-bottom: 10px;
+    }
+    .producto:nth-child(odd) {
+        margin-right: 2.5px;
+    }
+    .producto:nth-child(even) {
+        margin-left: 2.5px;
+    }
+}

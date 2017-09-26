@@ -1,0 +1,30 @@
+<!-- Vista Cuenta -->
+<ion-view view-title="Cuenta">
+  <ion-content>
+      <form name="register" ng-if="!usuarioActual">
+          <div class="list">
+            <label class="item item-input">
+            <input type="text" placeholder="E-mail" ng-model="perfil.email">
+            </label>
+
+            <label class="item item-input">
+            <input type="password" placeholder="Contraseña" ng-model="perfil.password">
+            </label>
+        </div>
+      </form>
+      <ul class="list" ng-if="usuarioActual">
+          <li class="item item-input">
+            {{usuarioActual.email}}
+          </li>
+          <li class="item item-input">
+            {{usuarioActual.uid}}
+          </li>
+          
+      </ul>
+  </ion-content>
+  <ion-footer-bar>
+    <button ng-if="!usuarioActual" class="button button-positive" ng-click="iniciar_sesion()">Iniciar Sesión</button>
+    <button ng-if="!usuarioActual" class="button button-positive" ng-click="registrar()">Registrar</button>
+    <button ng-if="usuarioActual" class="button button-positive" ng-click="cerrar_sesion()">Terminar sesión</button>
+  </ion-footer-bar>
+</ion-view>
